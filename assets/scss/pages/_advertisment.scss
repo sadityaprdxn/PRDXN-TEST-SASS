@@ -1,4 +1,5 @@
 .advertisment {
+	padding-bottom: 14px;
 	h3 {
 		padding: 21px 0 6px 3.5%;
 		@include textcharacteristics($secondaryColor, 20px, 500, uppercase);
@@ -8,9 +9,30 @@
 	}
 
 	ul {
-		padding: 25px 0;
+		padding: 25px 0 42px;
 		@include flex(wrap, row, space-between, center, center);
 	}
 
 	li { width: 16.66%; }
+
+	.angle-top {
+		width: 31px;
+		height: 31px;
+		border-radius: 50%;
+		position: relative;
+		text-indent: -9999px;
+		float: right;
+		background-color: $primaryColor;
+
+		&::before {
+			content: '\f106';
+			font-family: 'fontAwesome';
+			@include flex(wrap, row, center, center, center);
+			@include position(absolute,1,50%,auto,auto,50%);
+			@include vendor(transform, translateY(-50%) translateX(-50%));
+			text-indent: 0;
+			float: left;
+			color: $white;
+		}
+	}
 }

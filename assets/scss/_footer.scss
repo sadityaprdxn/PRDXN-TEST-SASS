@@ -1,0 +1,156 @@
+footer {
+	padding: 28px 0 0;
+	background-color: $white;
+
+	.wrapper {
+		@include flex(wrap,row,space-between,normal,normal);
+
+		& > ul { width: 20%;}
+	}
+
+	h4 {
+		padding-bottom: 10px;
+		@include textcharacteristics($secondaryColor, 14px, 500, uppercase);
+	}
+
+	a { 
+		&:hover { color: $primaryColor; }
+	}
+
+	//ABOUT US STYLING OVER HERE
+	.about-us {
+		p {
+			padding: 5px 0 16px; 
+			@include textcharacteristics($secondaryColor, 9px, 700, normal, 14px);
+	
+			span {
+				font-weight: 900;
+			}
+		}
+
+		a {
+			text-indent: -9999px;
+
+			&.facebook::before { content: '\f09a'; }
+			&.twitter::before { content:"\f099"; }
+			&.wifi::before { content: '\f099'; }
+			&.v::before { content: '\f099'; }
+			&.football::before { content: '\f099'; }
+			&.people::before { content: '\f099'; }
+
+			&::before {
+				font-family: 'fontAwesome';
+				text-indent: 0;
+				float: left;
+				font-size: 17px;
+				color: $transperantBlackColor;
+				@include vendor(transition, 0.3s ease-in-out);
+			}
+			
+			&:hover {
+				&::before { color: $primaryColor; } 
+			}
+		}
+	}
+
+	//ARCHIVE STYLING OVER HERE
+	.archives {
+		padding-left: 10px;
+
+		li { 
+			display: block;
+
+			&:nth-child(2) {
+				a { padding-top: 5px; }
+			}
+
+			&:last-child {
+				a { border-bottom: none; }
+			}
+		}
+
+		a {
+			display: block;
+			padding: 10.5px 0;
+			border-bottom: 1px dashed $transperantBlackColor;
+			@include textcharacteristics($secondaryColor, 9px, 700, capitalize);
+			
+			&:hover { color: $primaryColor; }
+		}
+	}
+	
+	//CONTACT US STYLING OVER HERE
+	.contact-us {
+		padding-left: 10px;
+
+		li {
+			display: block;
+		}
+
+		a {
+			padding-bottom: 11px;
+			@include textcharacteristics($secondaryColor, 9px, 700, capitalize);
+			@include vendor(transition, 0.3s ease-in-out);
+
+			&.mail::before { content: '\f0e0'; }
+			&.call::before { content: '\f095'; }
+			&.mobile::before { content: '\f10b'; }
+
+			&::before {
+				font-family: "fontAwesome";
+				text-indent: 0;
+				float: left;
+				font-size: 18px;
+				width: 25px;
+				height: 20px;
+				color: #ACACAC;
+			}
+			
+			&:hover { color: $primaryColor; }
+		}
+	}
+
+	
+	//FORM US STYLING OVER HERE
+	form {
+
+		input {
+			width: 100%;
+			height: 30px;
+			padding-left: 10px;
+			margin-bottom: 7px;
+			box-sizing: border-box;
+			border-style: none;
+			font-size: 10px;
+			font-style: italic;
+			background-color: $inputBackgroundColor;
+			border-bottom: 1px solid $formBorderBottomColor;
+			outline: none;
+		}
+
+		button{
+			padding: 10px 11px;
+			margin-top: 9px;
+			@include textcharacteristics($white, 10px, 200, uppercase);
+			background-color: $primaryColor;
+			border-style: none;
+			float: right;
+			@include vendor(transition, 0.3s ease-in-out);
+
+			&:hover { background-color: $secondaryColor; }
+		}
+	}
+
+	//FOOTER NAV STYLING STARTS HERE
+	.footer-nav{
+		padding: 1px 21.4%;
+		margin-top: 17px;
+		@include flex(wrap, row, space-between, center, center);
+		background-color: $secondaryColor;
+		box-sizing: border-box;
+
+		a {
+			@include textcharacteristics($white, 10px, 200, uppercase);
+		}
+	}
+}
