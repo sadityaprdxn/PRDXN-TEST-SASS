@@ -24,8 +24,9 @@
 	h2 {
 		width: 28%;
 		@include position(absolute, 1, 18%, 20%, auto, auto);
-		@include textcharacteristics($secondaryColor, 23px, 400, uppercase, 33px);
+		@include textcharacteristics($white, 23px, 400, uppercase, 33px);
 		text-align: center;
+		word-spacing: -2px;
 	}
 
 	.silder__controls {

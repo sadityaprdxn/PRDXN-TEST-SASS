@@ -1,0 +1,71 @@
+.welcome {
+	h2 {
+		padding: 26px 0;
+		@include textcharacteristics($secondaryColor, 25px, 500, uppercase, 33px);
+		position: relative;
+		letter-spacing: -1px;
+		text-align: center;
+
+		span { color: $primaryColor;}
+
+		&::after{
+			content: ' ';
+			width: 100%;
+			height: 0;
+			@include position(absolute, 1, auto, auto, 0, 0);
+			border: 1px dashed $dashedColor;
+		}
+	}
+
+	ul {
+		padding: 32px 0 0;
+		@include flex(wrap, row, space-between, center, center);
+	}
+
+	li {
+		width: 18.7%;
+
+		h2{
+			padding-top: 12px;
+			line-height: 25px;
+
+			&::after { content: none; }
+
+			span{
+				display: block;
+				@include textcharacteristics($secondaryColor, 14px, 500, capitalize);
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	figure {
+		border: 1px solid $dashedColor;
+		border-radius: 50%;
+		@include boxsizing();
+		position: relative;
+
+		&::after{
+			content: ' ';
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			@include position(absolute,1,0,auto,auto,0);
+			background-color: $transperantBlackColor;
+			opacity: 0;
+			@include vendor(transition,0.3s ease-in-out);
+		}
+
+		img{
+			border: 15px solid $white;
+			border-radius: 50%;
+			@include boxsizing();
+		}
+	}
+
+	a{
+		&:hover{
+			figure::after { opacity: 1;}
+		}
+	}
+}

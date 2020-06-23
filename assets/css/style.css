@@ -112,6 +112,7 @@ sub {
 body {
   box-sizing: border-box;
   font-family: 'Montserrat';
+  background-color: #fbfbfb;
 }
 
 a {
@@ -249,12 +250,13 @@ header .pull-me:hover {
   right: 20%;
   bottom: auto;
   left: auto;
-  color: #202020;
+  color: white;
   font-size: 23px;
   font-weight: 400;
   line-height: 33px;
   text-transform: uppercase;
   text-align: center;
+  word-spacing: -2px;
 }
 
 .slider .silder__controls {
@@ -305,5 +307,99 @@ header .pull-me:hover {
   float: left;
   font-size: 17px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome h2 {
+  padding: 26px 0;
+  color: #202020;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 33px;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.welcome h2 span {
+  color: #a0c63f;
+}
+
+.welcome h2::after {
+  content: ' ';
+  width: 100%;
+  height: 0;
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  border: 1px dashed #eaeaea;
+}
+
+.welcome ul {
+  padding: 32px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.welcome li {
+  width: 18.7%;
+}
+
+.welcome li h2 {
+  padding-top: 12px;
+  line-height: 25px;
+}
+
+.welcome li h2::after {
+  content: none;
+}
+
+.welcome li h2 span {
+  display: block;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+
+.welcome figure {
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.welcome figure::after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.welcome figure img {
+  border: 15px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.welcome a:hover figure::after {
+  opacity: 1;
 }
