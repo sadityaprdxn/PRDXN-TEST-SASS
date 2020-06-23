@@ -13,7 +13,11 @@
 		@include flex(wrap, row, space-between, center, center);
 	}
 
-	li { width: 16.66%; }
+	li { 
+		width: 16.66%;
+
+		@include breakpoint(phone) { width: 33.33%; }
+	}
 
 	.angle-top {
 		width: 31px;

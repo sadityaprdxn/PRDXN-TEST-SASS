@@ -15,6 +15,15 @@
 			@include position(absolute, 1, auto, auto, 0, 0);
 			border: 1px dashed $dashedColor;
 		}
+
+		@include breakpoint(ipad) { font-size: 18px; }
+
+		@include breakpoint(phone) { 
+			font-size: 15px;
+			line-height: 25px;
+		}
+
+		@include breakpoint(iphone) { font-size: 20px; }
 	}
 
 	ul {
@@ -24,6 +33,11 @@
 
 	li {
 		width: 18.7%;
+		text-align: center;
+
+		@include breakpoint(ipad) { width: 22%; }
+
+		@include breakpoint(iphone) { width: 100%; }
 
 		h2{
 			padding-top: 12px;
@@ -31,10 +45,12 @@
 
 			&::after { content: none; }
 
-			span{
+			span {
 				display: block;
 				@include textcharacteristics($secondaryColor, 14px, 500, capitalize);
 				letter-spacing: 0;
+
+				@include breakpoint(ipad) { font-size: 10px; }
 			}
 		}
 	}
@@ -64,8 +80,10 @@
 	}
 
 	a{
-		&:hover{
-			figure::after { opacity: 1;}
+		@include reverse-breakpoint(small-pc){
+			&:hover{
+				figure::after { opacity: 1;}
+			}
 		}
 	}
 }

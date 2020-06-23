@@ -5,7 +5,25 @@ footer {
 	.wrapper {
 		@include flex(wrap,row,space-between,normal,normal);
 
-		& > ul { width: 20%;}
+		& > ul
+		,form { 
+			width: 20%;
+
+			@include breakpoint(small-pc) {
+				width: 23%; 
+				padding-left: 0;	
+			}
+
+			@include breakpoint(ipad) { 
+				width: 40%;
+				padding-bottom: 50px;
+			}
+
+			@include breakpoint(phone) { 
+				width: 100%;
+				padding-bottom: 25px;
+			}
+		}
 	}
 
 	h4 {
@@ -14,7 +32,9 @@ footer {
 	}
 
 	a { 
-		&:hover { color: $primaryColor; }
+		@include reverse-breakpoint(small-pc) {
+			&:hover { color: $primaryColor; }
+		}
 	}
 
 	//ABOUT US STYLING OVER HERE
@@ -47,8 +67,10 @@ footer {
 				@include vendor(transition, 0.3s ease-in-out);
 			}
 			
-			&:hover {
-				&::before { color: $primaryColor; } 
+			@include reverse-breakpoint(small-pc){
+				&:hover {
+					&::before { color: $primaryColor; } 
+				}
 			}
 		}
 	}
@@ -75,7 +97,9 @@ footer {
 			border-bottom: 1px dashed $transperantBlackColor;
 			@include textcharacteristics($secondaryColor, 9px, 700, capitalize);
 			
-			&:hover { color: $primaryColor; }
+			@include reverse-breakpoint(small-pc) {
+				&:hover { color: $primaryColor; }
+			}
 		}
 	}
 	
@@ -106,7 +130,9 @@ footer {
 				color: #ACACAC;
 			}
 			
-			&:hover { color: $primaryColor; }
+			@include reverse-breakpoint(small-pc) {
+				&:hover { color: $primaryColor; }
+			}
 		}
 	}
 
@@ -128,7 +154,7 @@ footer {
 			outline: none;
 		}
 
-		button{
+		button {
 			padding: 10px 11px;
 			margin-top: 9px;
 			@include textcharacteristics($white, 10px, 200, uppercase);
@@ -137,12 +163,14 @@ footer {
 			float: right;
 			@include vendor(transition, 0.3s ease-in-out);
 
-			&:hover { background-color: $secondaryColor; }
+			@include reverse-breakpoint(small-pc) {
+				&:hover { background-color: $secondaryColor; }
+			}
 		}
 	}
 
 	//FOOTER NAV STYLING STARTS HERE
-	.footer-nav{
+	.footer-nav {
 		padding: 1px 21.4%;
 		margin-top: 17px;
 		@include flex(wrap, row, space-between, center, center);
@@ -151,6 +179,10 @@ footer {
 
 		a {
 			@include textcharacteristics($white, 10px, 200, uppercase);
+		}
+
+		@include breakpoint(small-pc) {
+			padding: 1px 10%;
 		}
 	}
 }

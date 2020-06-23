@@ -18,6 +18,12 @@
 	figure {
 		img {
 			&:last-child {	display: none;	}
+
+			@include breakpoint(iphone) {
+				&:first-child { display: none; }
+
+				&:last-child {	display: block;	}
+			}
 		}
 	}
 
@@ -27,6 +33,23 @@
 		@include textcharacteristics($white, 23px, 400, uppercase, 33px);
 		text-align: center;
 		word-spacing: -2px;
+
+		@include breakpoint(ipad) { font-size: 18px; }
+
+		@include breakpoint(phone) { 
+			width: 40%;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		@include breakpoint(iphone) {
+			width: 70%;
+			top: 20%;
+			right: 50%;
+			@include vendor(transform, translateY(-50%) translateX(50%));
+			font-size: 20px;
+			line-height: 30px;
+		}
 	}
 
 	.silder__controls {
@@ -61,6 +84,13 @@
 				font-size: 17px;
 				color: $white;
 				background-color: $transperantBlackColor;
+				@include vendor(transition, 0.3s ease-in-out);
+			}
+
+			@include reverse-breakpoint(small-pc){
+				&:hover {
+					&::before { background-color: $primaryColor; }
+				}
 			}
 		}
 	}
