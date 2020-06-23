@@ -67,7 +67,7 @@ footer {
 				@include vendor(transition, 0.3s ease-in-out);
 			}
 			
-			@include reverse-breakpoint(small-pc){
+			@include reverse-breakpoint(notebook){
 				&:hover {
 					&::before { color: $primaryColor; } 
 				}
@@ -97,7 +97,7 @@ footer {
 			border-bottom: 1px dashed $transperantBlackColor;
 			@include textcharacteristics($secondaryColor, 9px, 700, capitalize);
 			
-			@include reverse-breakpoint(small-pc) {
+			@include reverse-breakpoint(notebook) {
 				&:hover { color: $primaryColor; }
 			}
 		}
@@ -130,7 +130,7 @@ footer {
 				color: #ACACAC;
 			}
 			
-			@include reverse-breakpoint(small-pc) {
+			@include reverse-breakpoint(notebook) {
 				&:hover { color: $primaryColor; }
 			}
 		}
@@ -163,7 +163,7 @@ footer {
 			float: right;
 			@include vendor(transition, 0.3s ease-in-out);
 
-			@include reverse-breakpoint(small-pc) {
+			@include reverse-breakpoint(notebook) {
 				&:hover { background-color: $secondaryColor; }
 			}
 		}

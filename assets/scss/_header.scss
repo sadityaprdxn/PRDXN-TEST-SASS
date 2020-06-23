@@ -32,7 +32,7 @@ header {
 				@include vendor(transition, 0.3s ease-in-out);
 			}
 
-			@include reverse-breakpoint(small-pc){
+			@include reverse-breakpoint(notebook){
 				&:hover {
 					&::before {	opacity: 1;	}
 				}
@@ -100,7 +100,7 @@ header {
 			color: $primaryColor;
 		}
 
-		@include reverse-breakpoint(small-pc){
+		@include reverse-breakpoint(notebook){
 			&:hover {
 				@include vendor(transform, translateY(-1px));
 			}

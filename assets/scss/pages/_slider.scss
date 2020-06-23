@@ -83,7 +83,7 @@
 				@include vendor(transition, 0.3s ease-in-out);
 			}
 
-			@include reverse-breakpoint(small-pc){
+			@include reverse-breakpoint(notebook){
 				&:hover {
 					&::before { background-color: $primaryColor; }
 				}

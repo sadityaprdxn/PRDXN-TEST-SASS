@@ -194,7 +194,7 @@ header .navbar a::before {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   header .navbar a:hover::before {
     opacity: 1;
   }
@@ -280,7 +280,7 @@ header .pull-me::after {
   color: #a0c63f;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   header .pull-me:hover {
     transform: translateY(-1px);
   }
@@ -443,7 +443,7 @@ header .pull-me::after {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .slider .silder__controls a:hover::before {
     background-color: #a0c63f;
   }
@@ -577,7 +577,7 @@ header .pull-me::after {
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .welcome a:hover figure::after {
     opacity: 1;
   }
@@ -664,7 +664,7 @@ header .pull-me::after {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .portfolio li > a:hover::after {
     opacity: 1;
   }
@@ -705,7 +705,7 @@ header .pull-me::after {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .portfolio li .card__content a:hover {
     color: #202020;
   }
@@ -906,7 +906,7 @@ footer .about-us a::before {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   footer .about-us a:hover::before {
     color: #a0c63f;
   }
@@ -938,7 +938,7 @@ footer .archives a {
   text-transform: capitalize;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   footer .archives a:hover {
     color: #a0c63f;
   }
@@ -983,7 +983,7 @@ footer .contact-us a::before {
   color: #ACACAC;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   footer .contact-us a:hover {
     color: #a0c63f;
   }
@@ -1016,7 +1016,7 @@ footer form button {
   transition: 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   footer form button:hover {
     background-color: #202020;
   }

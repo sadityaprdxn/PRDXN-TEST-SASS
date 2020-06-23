@@ -80,7 +80,7 @@
 	}
 
 	a {
-		@include reverse-breakpoint(small-pc){
+		@include reverse-breakpoint(notebook){
 			&:hover {
 				figure::after { opacity: 1;}
 			}
