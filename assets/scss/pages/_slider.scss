@@ -63,13 +63,9 @@
 		a {
 			text-indent: -9999px;
 
-			&.slider-right-button::before {
-				content: '\f054';
-			}
+			&.slider-right-button::before { content: '\f054';	}
 
-			&.slider-left-button::before {
-				content: '\f053';
-			}
+			&.slider-left-button::before { content: '\f053'; }
 
 			&::before {
 				font-family: 'fontAwesome';

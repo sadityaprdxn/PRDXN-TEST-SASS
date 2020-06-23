@@ -46,7 +46,6 @@
 				&:hover {
 					&::after { opacity: 1; }
 				}
-
 			}
 		}
 
@@ -84,8 +83,6 @@
 		padding-top: 4px;
 		@include textcharacteristics($secondaryColor, 9px, 700, normal, 14px);
 
-		span {
-			font-weight: 900;
-		}
+		span { font-weight: 900; }
 	}
 }

@@ -8,7 +8,7 @@
 
 		span { color: $primaryColor;}
 
-		&::after{
+		&::after {
 			content: ' ';
 			width: 100%;
 			height: 0;
@@ -39,7 +39,7 @@
 
 		@include breakpoint(iphone) { width: 100%; }
 
-		h2{
+		h2 {
 			padding-top: 12px;
 			line-height: 25px;
 
@@ -61,7 +61,7 @@
 		@include boxsizing();
 		position: relative;
 
-		&::after{
+		&::after {
 			content: ' ';
 			width: 100%;
 			height: 100%;
@@ -72,16 +72,16 @@
 			@include vendor(transition,0.3s ease-in-out);
 		}
 
-		img{
+		img {
 			border: 15px solid $white;
 			border-radius: 50%;
 			@include boxsizing();
 		}
 	}
 
-	a{
+	a {
 		@include reverse-breakpoint(small-pc){
-			&:hover{
+			&:hover {
 				figure::after { opacity: 1;}
 			}
 		}

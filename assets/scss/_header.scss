@@ -106,9 +106,7 @@ header {
 			}
 		}
 
-		@include breakpoint(small-pc) {
-			right: 10%;
-		}
+		@include breakpoint(small-pc) {	right: 10%;	}
 
 		@include breakpoint(phone) { display: none; }
 	}
