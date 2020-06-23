@@ -159,11 +159,11 @@ header .navbar li:last-child {
 
 header .navbar a {
   padding: 10px 0;
+  position: relative;
   color: #202020;
   font-size: 9px;
   font-weight: 600;
   text-transform: uppercase;
-  position: relative;
 }
 
 header .navbar a::before {
@@ -215,4 +215,95 @@ header .pull-me::after {
 
 header .pull-me:hover {
   transform: translateY(-1px);
+}
+
+.slider .wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.slider .slider__content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.slider .slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slider figure img:last-child {
+  display: none;
+}
+
+.slider h2 {
+  width: 28%;
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  right: 20%;
+  bottom: auto;
+  left: auto;
+  color: #202020;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 33px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.slider .silder__controls {
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+}
+
+.slider .silder__controls a {
+  text-indent: -9999px;
+}
+
+.slider .silder__controls a.slider-right-button::before {
+  content: '\f054';
+}
+
+.slider .silder__controls a.slider-left-button::before {
+  content: '\f053';
+}
+
+.slider .silder__controls a::before {
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  width: 48px;
+  height: 48px;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  float: left;
+  font-size: 17px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }

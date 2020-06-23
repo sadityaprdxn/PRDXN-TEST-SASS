@@ -17,8 +17,8 @@ header {
 
 		a {
 			padding: 10px 0;
-			@include textcharacteristics($secondaryColor, 9px, 600, uppercase);
 			position: relative;
+			@include textcharacteristics($secondaryColor, 9px, 600, uppercase);
 
 			&::before {
 				content: ' ';

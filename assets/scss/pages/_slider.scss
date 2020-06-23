@@ -1,0 +1,66 @@
+.slider {
+
+	.wrapper {
+		width: 100%;
+		position: relative;
+	}
+
+	.slider__content {
+		@include flex(nowrap,row,flex-start,center,center);
+		overflow: hidden;
+	}
+
+	.slide {	
+		min-width: 100%;
+		position: relative;
+	}
+
+	figure {
+		img {
+			&:last-child {	display: none;	}
+		}
+	}
+
+	h2 {
+		width: 28%;
+		@include position(absolute, 1, 18%, 20%, auto, auto);
+		@include textcharacteristics($secondaryColor, 23px, 400, uppercase, 33px);
+		text-align: center;
+	}
+
+	.silder__controls {
+		width: 100%;
+		padding: 0 6%;
+		@include flex(wrap,row,space-between,center,center);
+		@include position(absolute,1,50%,auto,auto,auto);
+		@include boxsizing();
+		@include vendor(transform, translateY(-50%));
+
+		a {
+			text-indent: -9999px;
+
+			&.slider-right-button::before {
+				content: '\f054';
+			}
+
+			&.slider-left-button::before {
+				content: '\f053';
+			}
+
+			&::before {
+				font-family: 'fontAwesome';
+				text-indent: 0;
+				width: 48px;
+				height: 48px;
+				border: 5px solid $white;
+				border-radius: 50%;
+				@include flex(wrap,row,center,center,center);
+				@include boxsizing();
+				float: left;
+				font-size: 17px;
+				color: $white;
+				background-color: $transperantBlackColor;
+			}
+		}
+	}
+}
