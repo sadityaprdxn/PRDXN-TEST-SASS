@@ -1,0 +1,16 @@
+.advertisment {
+	h3 {
+		padding: 21px 0 6px 3.5%;
+		@include textcharacteristics($secondaryColor, 20px, 500, uppercase);
+		letter-spacing: -1px;
+
+		span { color: $primaryColor; }
+	}
+
+	ul {
+		padding: 25px 0;
+		@include flex(wrap, row, space-between, center, center);
+	}
+
+	li { width: 16.66%; }
+}
